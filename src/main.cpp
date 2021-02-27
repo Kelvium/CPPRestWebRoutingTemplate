@@ -11,7 +11,7 @@ int main() {
             {web::http::methods::GET, App::handlers::getHandler}
     };
     App::Application app;
-    app.initialize("http://127.0.0.1/", handlers);
+    app.initialize("http://127.0.0.1:5656", handlers);
     try {
         app.listen();
     } catch (const std::exception &exception) {
